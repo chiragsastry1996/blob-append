@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const express = require('express')
 const app = express();
 require('dotenv').config();
+require('./services/database')
 app.use('/public',express.static(publicPath));
 const PORT = process.env.PORT || 3000;
 
