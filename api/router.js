@@ -6,6 +6,13 @@ const fs = require('fs')
 const multer  = require('multer')
 const sql = require("mssql");
 
+const light_controller = require("./controller/light_controller")
+
+// router.get("/create", light_controller.create)
+router.get("/get", light_controller.get)
+router.get("/update", light_controller.update)
+
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         
